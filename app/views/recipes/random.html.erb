@@ -1,0 +1,13 @@
+<h1>Random Recipe</h1>
+
+<p><strong>Name</strong></p>
+<%= @recipe.name %>
+<% if @recipe.notes.present? %>
+  <p><strong>Description</strong></p>
+  <%= @recipe.notes %>
+<% end %>
+
+<p><%= link_to 'Next', root_path %></p>
+<hr/>
+<p><%= link_to 'All Recipes', recipes_path %> -
+<%= link_to 'New Recipe', new_recipe_path %></p>
