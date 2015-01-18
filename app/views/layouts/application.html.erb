@@ -3,7 +3,9 @@
 <head>
   <title>RandomRecipes</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -11,7 +13,9 @@
   <p><%= msg %></p>
 <% end %>
 
+<div class="container">
 <%= yield %>
+</div>
 
 </body>
 </html>
