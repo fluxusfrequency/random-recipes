@@ -15,7 +15,9 @@
           <tr>
             <td><%= recipe.name %></td>
             <% if recipe.notes && recipe.notes.match(/http/) %>
-              <td><%= link_to recipe.notes, recipe.notes %></td>
+              <td><%= link_to 'show link', recipe.notes %></td>
+            <% else %>
+              <td></td>
             <% end %>
             <td><%= link_to 'Show', recipe %></td>
             <td><%= link_to 'Edit', edit_recipe_path(recipe) %></td>
@@ -27,9 +29,10 @@
   </div>
 
   <hr />
+  <hr />
 
-  <div class="col-xs-12">
-    <%= link_to 'New Recipe', new_recipe_path %>
-    <%= link_to 'Random Recipe', root_path %>
+  <div class="col-xs-6 recipe-actions">
+    <%= button_to 'New Recipe', new_recipe_path, class: 'btn btn-success' %>
+    <%= button_to 'Random Recipe', root_path, class: 'btn btn-warning' %>
   </div>
 </div>
