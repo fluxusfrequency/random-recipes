@@ -10,7 +10,7 @@
         </tr>
       </thead>
 
-      <tbody>
+      <tbody class="recipes-table-body">
         <% @recipes.each do |recipe| %>
           <tr>
             <td><%= recipe.name %></td>
@@ -32,7 +32,7 @@
   <hr />
 
   <div class="col-xs-6 recipe-actions">
-    <%= button_to 'New Recipe', new_recipe_path, class: 'btn btn-success' %>
-    <%= button_to 'Random Recipe', root_path, class: 'btn btn-warning' %>
+    <%= link_to 'New Recipe', new_recipe_path, class: 'btn btn-success' %>
+    <%= link_to 'Random Recipe', root_path, class: 'btn btn-warning' %>
   </div>
 </div>

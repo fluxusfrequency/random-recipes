@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 <h1><%= @recipe.name %></h1>
-<% if recipe.notes && recipe.notes.match(/http/) %>
-  <p><%= link_to recipe.notes, recipe.notes %></p>
+<% if @recipe.notes && @recipe.notes.match(/http/) %>
+  <p><%= link_to @recipe.notes, @recipe.notes %></p>
 <% else %>
   <p><%= @recipe.notes %></p>
 <% end %>
