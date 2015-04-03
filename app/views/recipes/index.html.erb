@@ -14,6 +14,9 @@
         <% @recipes.each do |recipe| %>
           <tr>
             <td><%= recipe.name %></td>
+            <% if recipe.notes && recipe.notes.match(/http/) %>
+              <td><%= link_to recipe.notes, recipe.notes %></td>
+            <% end %>
             <td><%= link_to 'Show', recipe %></td>
             <td><%= link_to 'Edit', edit_recipe_path(recipe) %></td>
             <td><%= link_to 'Destroy', recipe, method: :delete, data: { confirm: 'Are you sure?' } %></td>

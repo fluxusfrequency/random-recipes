@@ -1,6 +1,11 @@
 <p id="notice"><%= notice %></p>
 <h1><%= @recipe.name %></h1>
-<p><%= @recipe.notes %></p>
+<% if recipe.notes && recipe.notes.match(/http/) %>
+  <p><%= link_to recipe.notes, recipe.notes %></p>
+<% else %>
+  <p><%= @recipe.notes %></p>
+<% end %>
+
 
 <%= link_to 'Edit', edit_recipe_path(@recipe) %> |
 <%= link_to 'Destroy', @recipe, method: :delete, data: { confirm: 'Are you sure?' } %> |
