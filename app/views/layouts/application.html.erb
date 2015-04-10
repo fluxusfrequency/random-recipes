@@ -9,12 +9,17 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<% flash.each do |type, msg| %>
-  <p><%= msg %></p>
-<% end %>
 
 <div class="container">
-<%= yield %>
+  <% if flash.present? %>
+    <div>
+      <% flash.each do |type, msg| %>
+        <p class="alert alert-success"><%= msg %></p>
+      <% end %>
+    </div>
+  <% end %>
+
+  <%= yield %>
 </div>
 
 </body>
