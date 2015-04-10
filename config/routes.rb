@@ -1,9 +1,7 @@
 Rails.application.routes.draw do
-  resources :recipes do
-    member do
-      get 'random'
-    end
-  end
+  resources :recipes
+
+  get 'random' => 'recipes#random', as: :random_recipe
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

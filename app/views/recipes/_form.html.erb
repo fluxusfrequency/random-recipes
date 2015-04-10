@@ -10,8 +10,9 @@
       </ul>
     </div>
   <% end %>
-  <p><%= f.text_field :name, placeholder: 'Name', autofocus: true %></p>
-  <p><%= f.text_area :notes, placeholder: 'Notes' %></p>
+
+  <p><%= f.text_field :name, class: "form-control", placeholder: 'Name', autofocus: true%></p>
+  <p><%= f.text_area :notes, class: "form-control", placeholder: 'Notes', rows: "10" %></p>
 
   <div class="actions">
     <%= f.submit 'Create', class: 'btn btn-success' %>
